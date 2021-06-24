@@ -23,13 +23,7 @@ export default function Pomodoro({ timerValues, callback }) {
             }, delay)
             return () => clearTimeout(nextUpdate);
         }
-    }, [clockTime, timerValues.appStatus, callback]); 
-
-    useEffect(() => {
-        setLastUpdate(() => Date.now());
-        callback(() => ({ ...timerValues, appStatus: true }))
-        setClockTime(() => ({ minutes: timerValues.sessionTimer, seconds: 0 }));
-    }, [timerValues.breakTimer, timerValues.sessionTimer, callback]) 
+    }); 
 
     useEffect(() => {
         if(timerValues.appStatus !== APP_STATUS.REFRESH) return;
