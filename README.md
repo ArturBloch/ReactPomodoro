@@ -1,3 +1,6 @@
+To check out the site visit:
+https://densau.github.io/ReactPomodoro/
+
 ![alt text](screen.png)
 
 ## Available Scripts
