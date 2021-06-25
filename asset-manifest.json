@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "//densau.github.io/ReactPomodoro/static/css/main.920b0664.chunk.css",
+    "main.js": "//densau.github.io/ReactPomodoro/static/js/main.1680dfeb.chunk.js",
+    "main.js.map": "//densau.github.io/ReactPomodoro/static/js/main.1680dfeb.chunk.js.map",
+    "runtime-main.js": "//densau.github.io/ReactPomodoro/static/js/runtime-main.7d4c83d9.js",
+    "runtime-main.js.map": "//densau.github.io/ReactPomodoro/static/js/runtime-main.7d4c83d9.js.map",
+    "static/js/2.f51ee310.chunk.js": "//densau.github.io/ReactPomodoro/static/js/2.f51ee310.chunk.js",
+    "static/js/2.f51ee310.chunk.js.map": "//densau.github.io/ReactPomodoro/static/js/2.f51ee310.chunk.js.map",
+    "static/js/3.5643bb3f.chunk.js": "//densau.github.io/ReactPomodoro/static/js/3.5643bb3f.chunk.js",
+    "static/js/3.5643bb3f.chunk.js.map": "//densau.github.io/ReactPomodoro/static/js/3.5643bb3f.chunk.js.map",
+    "index.html": "//densau.github.io/ReactPomodoro/index.html",
+    "static/css/main.920b0664.chunk.css.map": "//densau.github.io/ReactPomodoro/static/css/main.920b0664.chunk.css.map",
+    "static/js/2.f51ee310.chunk.js.LICENSE.txt": "//densau.github.io/ReactPomodoro/static/js/2.f51ee310.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.7d4c83d9.js",
+    "static/js/2.f51ee310.chunk.js",
+    "static/css/main.920b0664.chunk.css",
+    "static/js/main.1680dfeb.chunk.js"
+  ]
+}
