@@ -1,7 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { APP_STATUS, SESSION_TYPE} from '../constants/enums';
+import { useTimer } from './timer';
 
-export default function Pomodoro({ timerValues, callback }) {
+export default function Pomodoro() {
+    const { timerValues, setTimerValues} = useTimer()
     const [clockTime, setClockTime] = useState({ minutes: timerValues.sessionTimer, seconds: 0 });
     const [lastUpdate, setLastUpdate] = useState(Date.now());
 
@@ -15,7 +17,7 @@ export default function Pomodoro({ timerValues, callback }) {
                         setClockTime(() => ({ minutes: clockTime.minutes - 1, seconds: 59 }));
                     } else {
                         var newSessionType = timerValues.sessionType === SESSION_TYPE.BREAK ? SESSION_TYPE.ACTIVE : SESSION_TYPE.BREAK;
-                        callback(() => ({ ...timerValues, sessionType: newSessionType, appStatus: APP_STATUS.REFRESH}));
+                        setTimerValues(() => ({ ...timerValues, sessionType: newSessionType, appStatus: APP_STATUS.REFRESH}));
                     }
                 } else {
                     setClockTime(() => ({ ...clockTime, seconds: clockTime.seconds - 1 }));
@@ -31,8 +33,8 @@ export default function Pomodoro({ timerValues, callback }) {
         var localMinutes = timerValues.sessionType === SESSION_TYPE.BREAK ? timerValues.breakTimer : timerValues.sessionTimer;
         var localSeconds = 0;
         setClockTime(() => ({ minutes: localMinutes, seconds: localSeconds }));
-        callback(() => ({...timerValues, appStatus: APP_STATUS.RUNNING}))
-    }, [timerValues, callback]) 
+        setTimerValues(() => ({...timerValues, appStatus: APP_STATUS.RUNNING}))
+    }, [timerValues, setTimerValues]) 
 
     const timerMinutesText = (clockTime.minutes) < 10 ? `0${clockTime.minutes}` : clockTime.minutes;
     const timerSecondsText = (clockTime.seconds) < 10 ? `0${clockTime.seconds}` : clockTime.seconds;
